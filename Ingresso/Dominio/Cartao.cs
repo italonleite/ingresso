@@ -13,15 +13,14 @@ namespace Ingresso.Dominio
 
         }
 
-        public Cartao(int id, string numero, string nome, string cvv)
+        public Cartao(int id, string numero, string nome, string cvv, int usuarioId, Usuario usuario)
         {
             Id = id;
             Numero = numero;
             Nome = nome;
-            //   DataVencimento = dataVencimento;
-            Cvv = EncryptPassword(cvv);
-
-
+            Cvv = cvv;
+            UsuarioId = usuarioId;
+            Usuario = usuario;
         }
 
         private string EncryptPassword(string pass)

@@ -12,8 +12,8 @@ namespace Ingresso
         public static void Register(HttpConfiguration config)
         {
             // Serviços e configuração da API da Web
-            GlobalConfiguration.Configuration.Formatters.Clear();
-            GlobalConfiguration.Configuration.Formatters.Add(new JsonMediaTypeFormatter());
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.JsonFormatter.Indent = true;
            
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();

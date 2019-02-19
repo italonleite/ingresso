@@ -18,10 +18,12 @@ namespace Ingresso.Data.Mapeamento
             Property(x => x.Cpf).IsRequired();
             Property(x => x.Sexo).IsRequired();
             Property(x => x.Endereco).IsRequired();
-            HasRequired(l => l.Login);
+            Property(x => x.Login).IsRequired();
+            Property(x => x.Senha).IsRequired();
             HasMany(c => c.Cartoes);
-
-
+            
         }
+
+       
     }
 }

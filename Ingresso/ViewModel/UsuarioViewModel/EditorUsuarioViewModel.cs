@@ -1,4 +1,5 @@
-﻿using Ingresso.Dominio;
+﻿using Flunt.Notifications;
+using Flunt.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace Ingresso.ViewModel.UsuarioViewModel
 {
-    public class ListaUsuarioViewModel
+    public class EditorUsuarioViewModel : Notifiable
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -15,8 +16,6 @@ namespace Ingresso.ViewModel.UsuarioViewModel
         public string Endereco { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
-        public IEnumerable<Cartao> Cartoes { get; set; }
-        
 
+            }
     }
-}

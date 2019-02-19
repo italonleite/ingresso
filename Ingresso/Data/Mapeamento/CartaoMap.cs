@@ -15,7 +15,7 @@ namespace Ingresso.Data.Mapeamento
            HasKey(x => x.Id);
             Property(x => x.Numero);
             Property(x => x.Nome);
-              
+            
              
           
 
