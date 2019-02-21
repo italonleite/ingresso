@@ -1,4 +1,6 @@
 ﻿using Ingresso.Data;
+using Ingresso.Dominio;
+using Ingresso.ViewModel;
 using Ingresso.ViewModel.PagamentoViewModel;
 using System;
 using System.Collections.Generic;
@@ -38,8 +40,33 @@ namespace Ingresso.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        [Route("v1/pagamento")]
+        [HttpPost]
+        public ResultViewModel Post([FromBody]EditorPagamentoViewModel model)
         {
+
+            if (model.Invalid)
+                return new ResultViewModel
+                {
+                    Success = false,
+                    Message = "Não foi possível realizar o pagamento",
+                    Data = model.Notifications
+                };
+
+            var pagamento = new Pagamento();
+            pagamento.Numero = model.Numero;
+            pagamento.EventoId = model.EventoId;
+            pagamento.EventoId = model.UsuarioId;
+           
+            db.Pagamentos.Add(pagamento);
+            db.SaveChanges();
+
+            return new ResultViewModel
+            {
+                Success = true,
+                Message = "Usuario cadastrado com sucesso!",
+                Data = pagamento
+            };
         }
 
         // PUT api/<controller>/5

@@ -1,24 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace Ingresso
+namespace WebApplication1
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
             // Serviços e configuração da API da Web
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
-            config.Formatters.JsonFormatter.Indent = true;
-
-            //tentei adicionar para resolver problema de Cors, mas não tive sucesso.
-            config.EnableCors();
-
-          
 
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();

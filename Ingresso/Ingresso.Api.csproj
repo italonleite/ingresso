@@ -166,7 +166,6 @@
     <Compile Include="Controllers\PagamentosController.cs" />
     <Compile Include="Controllers\UsuariosController .cs" />
     <Compile Include="Controllers\EventosController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\IngressoDbContexto.cs" />
     <Compile Include="Data\Mapeamento\CartaoMap.cs" />
     <Compile Include="Data\Mapeamento\EventoMap.cs" />
@@ -179,16 +178,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902190243438_v1.cs" />
-    <Compile Include="Migrations\201902190243438_v1.Designer.cs">
-      <DependentUpon>201902190243438_v1.cs</DependentUpon>
+    <Compile Include="Migrations\201902211211019_v1.cs" />
+    <Compile Include="Migrations\201902211211019_v1.Designer.cs">
+      <DependentUpon>201902211211019_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\CartaoViewModel\ListaCartaoViewModel.cs" />
     <Compile Include="ViewModel\EventoViewModel\ListaEventoViewModel.cs" />
+    <Compile Include="ViewModel\PagamentoViewModel\EditorPagamentoViewModel.cs" />
     <Compile Include="ViewModel\PagamentoViewModel\ListaPagamentoViewModel.cs" />
     <Compile Include="ViewModel\ResultViewModel.cs" />
+    <Compile Include="ViewModel\UsuarioViewModel\UsuarioExisteViewModel.cs" />
     <Compile Include="ViewModel\UsuarioViewModel\EditorUsuarioViewModel.cs" />
     <Compile Include="ViewModel\UsuarioViewModel\ListaUsuarioViewModel.cs" />
   </ItemGroup>
@@ -197,6 +198,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,8 +210,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902190243438_v1.resx">
-      <DependentUpon>201902190243438_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902211211019_v1.resx">
+      <DependentUpon>201902211211019_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

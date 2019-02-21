@@ -13,7 +13,7 @@ namespace Ingresso.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201902190243438_v1"; }
+            get { return "201902211211019_v1"; }
         }
         
         string IMigrationMetadata.Source
