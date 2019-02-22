@@ -16,9 +16,9 @@ namespace Ingresso.Dominio
         public Cartao(int id, string numero, string nome, string cvv, int usuarioId, Usuario usuario)
         {
             Id = id;
-            Numero = numero;
+            Numero = EncryptNumero(numero);
             Nome = nome;
-            Cvv = cvv;
+            Cvv = EncryptCvv(cvv);
             UsuarioId = usuarioId;
             Usuario = usuario;
         }
@@ -29,6 +29,18 @@ namespace Ingresso.Dominio
             var CVV = (cvv += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
             var md5 = System.Security.Cryptography.MD5.Create();
             var data = md5.ComputeHash(Encoding.Default.GetBytes(CVV));
+            var sbString = new StringBuilder();
+            foreach (var t in data)
+                sbString.Append(t.ToString("x2"));
+
+            return sbString.ToString();
+        }
+        private string EncryptNumero(string numero)
+        {
+            if (string.IsNullOrEmpty(numero)) return "";
+            var Numero = (numero += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
+            var md5 = System.Security.Cryptography.MD5.Create();
+            var data = md5.ComputeHash(Encoding.Default.GetBytes(Numero);
             var sbString = new StringBuilder();
             foreach (var t in data)
                 sbString.Append(t.ToString("x2"));
