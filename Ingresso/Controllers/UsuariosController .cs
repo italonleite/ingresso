@@ -37,10 +37,10 @@ namespace Ingresso.Controllers
         }
        [Route("v1/usuarios/{login}")]
         [HttpGet]
-        public bool VerificarLogin(string login)
+        public bool VerificarCpf(string cpf)
         {
             //any retorna um boolean
-            return db.Usuarios.Any(x => x.Login == login);
+            return db.Usuarios.Any(x => x.Cpf == cpf);
         }
 
        [Route("v1/usuarios")]
