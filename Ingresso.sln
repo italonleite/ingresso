@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingresso.Api", "Ingresso\Ingresso.Api.csproj", "{4BB39F76-7DB5-4B27-8DED-D2882B46B760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingresso.Web", "Ingresso.Web\Ingresso.Web.csproj", "{C6C0D171-599C-4A0A-A1B7-0B130127DBF6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{4BB39F76-7DB5-4B27-8DED-D2882B46B760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BB39F76-7DB5-4B27-8DED-D2882B46B760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BB39F76-7DB5-4B27-8DED-D2882B46B760}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6C0D171-599C-4A0A-A1B7-0B130127DBF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6C0D171-599C-4A0A-A1B7-0B130127DBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6C0D171-599C-4A0A-A1B7-0B130127DBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6C0D171-599C-4A0A-A1B7-0B130127DBF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
