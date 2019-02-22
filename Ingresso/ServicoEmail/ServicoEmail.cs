@@ -7,7 +7,7 @@ namespace Ingresso.Services
 {
     public class ServicoEmail
     {
-        public void Enviar(string name, string email, string subject, string body)
+        public void Enviar(string nome, string email, string assunto, string mensagem)
         {
             // Implementar o Envio
         }
