@@ -9,8 +9,7 @@ using System.Web.Http.Cors;
 
 namespace Ingresso.Controllers
 {
-    [EnableCors(origins: "https://ingressoapi.azurewebsites.net/v1", headers: "*", methods: "*")]
-
+   
     public class UsuariosController : ApiController
     {
         private IngressoDbContexto db = new IngressoDbContexto();
@@ -24,7 +23,7 @@ namespace Ingresso.Controllers
             return db.Usuarios
                .Select(x => new ListaUsuarioViewModel
                {
-                   Id = x.Id,
+                  
                    Nome = x.Nome,
                    Cpf = x.Cpf,
                    Sexo = x.Sexo,
@@ -36,25 +35,24 @@ namespace Ingresso.Controllers
                })
                .ToList();
         }
-        [Route("v1/usuarios/{login}")]
+       [Route("v1/usuarios/{login}")]
         [HttpGet]
-        public bool VerificarSeUsuarioExiste(string login)
+        public bool VerificarLogin(string login)
         {
             //any retorna um boolean
             return db.Usuarios.Any(x => x.Login == login);
         }
 
-
-        [Route("v1/usuarios")]
+       [Route("v1/usuarios")]
         [HttpPost]
-        public ResultViewModel Post([FromBody]EditorUsuarioViewModel model)
+        public ResultViewModel Post([FromBody]EditarUsuarioViewModel model)
         {
 
             if (model.Invalid)
                 return new ResultViewModel
                 {
                     Success = false,
-                    Message = "Não foi possível cadastrar o produto",
+                    Message = "Não foi possível cadastrar o usuario",
                     Data = model.Notifications
                 };
 
@@ -76,39 +74,12 @@ namespace Ingresso.Controllers
             };
         }
 
-
-        [Route("v1/usuarios")]
-        [HttpPost]
-        public ResultViewModel Post([FromBody]UsuarioExisteViewModel model)
+        [Route("v1/usuarios/{id}")]
+        [HttpGet]
+        public Usuario Get(int id)
         {
-
-            if (model.Invalid)
-                return new ResultViewModel
-                {
-                    Success = false,
-                    Message = "Usuario não encontrado",
-                    Data = model.Notifications
-                };
-
-            var usuario = new Usuario();            
-            usuario.Login = model.Login;
-            
-            db.Usuarios.Add(usuario);
-            db.SaveChanges();
-
-            return new ResultViewModel
-            {
-                Success = true,
-                Message = "Usuario cadastrado com sucesso!",
-                Data = usuario
-            };
+            return db.Usuarios.AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
         }
-        //[Route("v1/eventos/{id}")]
-        //[HttpGet]
-        //public Evento Get(int id)
-        //{
-        //    return db.Eventos.AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
-        //}
 
 
 

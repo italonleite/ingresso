@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Ingresso.ViewModel.UsuarioViewModel
 {
-    public class EditorUsuarioViewModel : Notifiable
+    public class EditarUsuarioViewModel : Notifiable
     {
         public int Id { get; set; }
         public string Nome { get; set; }

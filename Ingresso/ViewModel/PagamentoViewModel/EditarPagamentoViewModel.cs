@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Ingresso.ViewModel.PagamentoViewModel
 {
-    public class EditorPagamentoViewModel : Notifiable
+    public class EditarPagamentoViewModel : Notifiable
     {
         public string Numero { get; set; }
         public int EventoId { get; set; }

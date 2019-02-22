@@ -163,7 +163,6 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CartoesController.cs" />
-    <Compile Include="Controllers\PagamentosController.cs" />
     <Compile Include="Controllers\UsuariosController .cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Data\IngressoDbContexto.cs" />
@@ -184,21 +183,19 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicoEmail\ServicoEmail.cs" />
     <Compile Include="ViewModel\CartaoViewModel\ListaCartaoViewModel.cs" />
     <Compile Include="ViewModel\EventoViewModel\ListaEventoViewModel.cs" />
-    <Compile Include="ViewModel\PagamentoViewModel\EditorPagamentoViewModel.cs" />
+    <Compile Include="ViewModel\PagamentoViewModel\EditarPagamentoViewModel.cs" />
     <Compile Include="ViewModel\PagamentoViewModel\ListaPagamentoViewModel.cs" />
     <Compile Include="ViewModel\ResultViewModel.cs" />
-    <Compile Include="ViewModel\UsuarioViewModel\UsuarioExisteViewModel.cs" />
-    <Compile Include="ViewModel\UsuarioViewModel\EditorUsuarioViewModel.cs" />
+    <Compile Include="ViewModel\UsuarioViewModel\EditarUsuarioViewModel.cs" />
     <Compile Include="ViewModel\UsuarioViewModel\ListaUsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\IngressoApi - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\ingressoweb - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

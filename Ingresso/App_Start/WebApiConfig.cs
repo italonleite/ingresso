@@ -11,14 +11,12 @@ namespace Ingresso
     {
         public static void Register(HttpConfiguration config)
         {
-            // Serviços e configuração da API da Web
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
-            config.Formatters.JsonFormatter.Indent = true;
-
-            //tentei adicionar para resolver problema de Cors, mas não tive sucesso.
+            //tentei adicionar para resolver problema de Cors, Mas não consegui.
             config.EnableCors();
 
-          
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.JsonFormatter.Indent = true;
+                               
 
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();

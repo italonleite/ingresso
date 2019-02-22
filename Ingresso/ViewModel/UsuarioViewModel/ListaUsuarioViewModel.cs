@@ -8,7 +8,7 @@ namespace Ingresso.ViewModel.UsuarioViewModel
 {
     public class ListaUsuarioViewModel
     {
-        public int Id { get; set; }
+       
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public string Sexo { get; set; }

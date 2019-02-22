@@ -23,12 +23,12 @@ namespace Ingresso.Dominio
             Usuario = usuario;
         }
 
-        private string EncryptPassword(string pass)
+        private string EncryptCvv(string cvv)
         {
-            if (string.IsNullOrEmpty(pass)) return "";
-            var password = (pass += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
+            if (string.IsNullOrEmpty(cvv)) return "";
+            var CVV = (cvv += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
             var md5 = System.Security.Cryptography.MD5.Create();
-            var data = md5.ComputeHash(Encoding.Default.GetBytes(password));
+            var data = md5.ComputeHash(Encoding.Default.GetBytes(CVV));
             var sbString = new StringBuilder();
             foreach (var t in data)
                 sbString.Append(t.ToString("x2"));
@@ -44,5 +44,6 @@ namespace Ingresso.Dominio
         public string Cvv { get; set; }
         public int UsuarioId { get; set; } 
         public Usuario Usuario { get; set; }
+       
     }
 }
