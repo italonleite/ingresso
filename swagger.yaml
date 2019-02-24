@@ -6,7 +6,7 @@ info:
   license:
     name: MIT
     url: https://github.com/apiaryio/polls-api/blob/master/LICENSE
-host: polls.apiblueprint.org
+host: ingressoapi.azurewebsites.net
 basePath: /
 schemes:
 - http
@@ -15,10 +15,10 @@ consumes:
 produces:
 - application/json
 paths:
-  /questions:
+  /v1/usuarios:
     x-summary: Questions Collection
     get:
-      summary: List All Questions
+      summary: Lista De Usuarios
       responses:
         200:
           description: Successful Response
