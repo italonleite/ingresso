@@ -9,8 +9,11 @@ namespace Ingresso.ViewModel.CartaoViewModel
     {
 
         public string Numero { get; set; }
-      
-     
+        public string NomeUsuario { get; set; }
+
+
+        
+
 
     }
 }

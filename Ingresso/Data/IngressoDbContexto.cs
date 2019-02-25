@@ -13,6 +13,12 @@ namespace Ingresso.Data
         public IngressoDbContexto() : base(@"Server=tcp:ingresso.database.windows.net;Database=ingresso;
 User ID=italonleite@ingresso;Password=leite_150787;Trusted_Connection=False;
 Encrypt=True;")
+
+
+     //       @"Server=DESKTOP-08PGJ59\SQLNOVO;Database=ingressoNovo;Trusted_Connection=True;"
+        /* (@"Server=tcp:ingresso.database.windows.net;Database=ingresso;
+User ID=italonleite@ingresso;Password=leite_150787;Trusted_Connection=False;
+Encrypt=True;") */
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;

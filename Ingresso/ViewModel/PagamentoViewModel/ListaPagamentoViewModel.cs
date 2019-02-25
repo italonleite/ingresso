@@ -7,8 +7,12 @@ namespace Ingresso.ViewModel.PagamentoViewModel
 {
     public class ListaPagamentoViewModel
     {
-        public string Numero { get; set; }
-        public string NomeEvento { get; set; }
+        public string NumeroTicket { get; set; }
         public string NomeUsuario { get; set; }
+        public string Cpf { get; set; }
+        public string NomeEvento { get; set; }
+        public string LocalEvento { get; set; }
+        
+
     }
 }

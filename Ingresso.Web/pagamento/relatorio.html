@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="usuario.css" rel="stylesheet">
+  <title>Relatório Pagamentos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">Ingressos - Reserve</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"><span>Home</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pagamento</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Relatórios
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../usuario/relatorio.html">Usuários</a>
+                  <a class="dropdown-item" href="relatorio.html">Pagamentos</a>
+              </div>
+            </li>
+          </ul>
+          <a class="btn btn-outline-primary" href="../usuario/index.html">Login</a>
+        </div>
+      </nav>
+  <div class="container">
+    <div class="text-center">
+      <h2>Pagamentos Registrados</h2>
+      <p class="lead">Relatório</p>
+    </div>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <button type="button" id="pagamentos" class="btn btn-sm btn-outline-secondary">Listar Pagagamentos</button>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Numero Ticket</th>
+              <th>Nome Usuário</th>
+              <th>Cpf</th>
+              <th>Nome Evento</th>
+              <th>Local Evento</th>
+            </tr>
+          </thead>
+          <tbody id="resultado">
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <!-- Listar Pagamento -->
+    <script src="listaPagamento.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+</html>

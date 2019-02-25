@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace Ingresso.Controllers
 {
-    [EnableCors(origins: "http://italoleite.com.br", headers: "*", methods: "*")]
+  
 
     public class EventosController : ApiController
     {

@@ -1,6 +1,17 @@
 
 var webbase = "https://ingressoapi.azurewebsites.net/v1/";
 
+
+function Header (A, B, C, D) {
+    this.A = A;
+    this.B = B;
+    this.C = C;
+    this.D = D;
+};
+var header = new Header(undefined, undefined, undefined, undefined);
+function setHeader() {
+
+}
 function internalWebService() {
     this.GET = function (URL, Data, Async, Function) {
         if (Async == undefined) Async = false;
@@ -8,7 +19,7 @@ function internalWebService() {
         $.ajax({
             type: "GET",
             url: webbase + URL + "/" + Data,
-            contentType: "application/json; charset=utf-8",
+            contentType: 'json',
             crossDomain: true,
             dataType: 'json',
             headers: setHeader(),
@@ -29,16 +40,16 @@ function internalWebService() {
         var dataReturn;
         $.ajax({
             type: "POST",
-            url: webbase + URL + "/" + Data,
+            url: webbase + URL,
             data: JSON.stringify(Data),
             headers: setHeader(),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             processData: true,
             async: Async,
-            success: function (data, status, jqXHR) {
-                if (Function != undefined) Function(data, status, jqXHR);
-                dataReturn = data;
+            success: function (Data, status, jqXHR) {
+                if (Function != undefined) Function(Data, status, jqXHR);
+                dataReturn = Data;
             },
             error: function (xhr) {
                 if (Function != undefined) Function('', 'failed', jqXHR);
@@ -54,13 +65,9 @@ function internalWebService() {
 function WebService(servico) {
     this.service = new internalWebService(servico);
 
-    this.GET = function (URL, Data, Async, Function) {
-        this.service.GET(URL, Data, Async, Function);
-    }
-
-    this.POST = function (URL, Data, Async, Function) {
+      this.POST = function (URL, Data, Async, Function) {
         this.service.POST(URL, Data, Async, Function);
     }
 
-   
+  
 }

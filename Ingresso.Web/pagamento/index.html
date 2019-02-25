@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Pagamento</title>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Ingressos - Reserve</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html"><span>Home</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Pagamento</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Relatórios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../usuario/relatorio.html">Usuários</a>
+            <a class="dropdown-item" href="relatorio.html">Pagamentos</a>
+          </div>
+        </li>
+      </ul>
+      <a class="btn btn-outline-primary" href="../usuario/index.html">Login</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="py-5 text-center">
+      <h2>Pagamento</h2>
+      <p class="lead">Falta pouco! para finalizar sua compra realize o pagamento.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Descrição Evento</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Nome do Evento: xx</h6>
+              <small class="text-muted">Descrição: xx</small>
+            </div>
+            <span class="text-muted">R$ xx</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <h5 class="mb-3">Cartões registrados</h5>
+              <select class="custom-select d-block w-100" id="country" required="">
+                <option value="">Escolha</option>
+                <option>Cartão 1</option>
+                <option>Cartao 2</option>
+                <option>Cartão 3</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <h5 class="mb-3">Forma de Pagamento</h5>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                    required="">
+                  <label class="custom-control-label" for="credit">Cartão de crédito</label>
+                </div>
+              </div>
+              <h5 class="mb-3">Adicionar novo cartão</h5>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-name">Nome</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                  <small class="text-muted">Nome completo impresso</small>
+                  <div class="invalid-feedback">
+                    Nome é obrigatório
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-number">Número Cartão</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">Validade</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="cc-cvv">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar Compra</button>
+        </form>
+      </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">©2019 Ingresso | Reserve</p>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>

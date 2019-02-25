@@ -47,12 +47,27 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="index.html" />
-    <Content Include="servico.js" />
-    <Content Include="WebMetodos.js" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Content Include="evento.css" />
+    <Content Include="evento\evento.css" />
+    <Content Include="evento\index.html" />
+    <Content Include="index.html" />
+    <Content Include="listarEvento.js" />
+    <Content Include="pagamento\index.html" />
+    <Content Include="pagamento\listaPagamento.js" />
+    <Content Include="pagamento\relatorio.html" />
+    <Content Include="usuario\cadastrar.html" />
+    <Content Include="usuario\index.html" />
+    <Content Include="usuario\listarUsuario.js" />
+    <Content Include="usuario\login.css" />
+    <Content Include="usuario\relatorio.html" />
+    <Content Include="usuario\servico.js" />
+    <Content Include="usuario\servicoGet.js" />
+    <Content Include="usuario\servicoPost.js" />
+    <Content Include="usuario\usuario.css" />
+    <Content Include="usuario\WebMetodos.js" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

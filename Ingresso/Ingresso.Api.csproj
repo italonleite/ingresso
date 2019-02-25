@@ -163,6 +163,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CartoesController.cs" />
+    <Compile Include="Controllers\PagamentosController.cs" />
     <Compile Include="Controllers\UsuariosController .cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Data\IngressoDbContexto.cs" />

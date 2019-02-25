@@ -23,8 +23,8 @@ namespace Ingresso.Controllers
                .Select(x => new ListaCartaoViewModel
                {
                    Numero = x.Numero,
-                 
-                  
+                   NomeUsuario = x.Usuario.Nome
+                                  
                })
                .ToList();
         }

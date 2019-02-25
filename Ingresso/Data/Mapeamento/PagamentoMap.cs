@@ -16,6 +16,7 @@ namespace Ingresso.Data.Mapeamento
             Property(x => x.Numero).IsRequired();
             HasRequired(x => x.Usuario);
             HasRequired(x => x.Evento);
+            
         }
         
     }

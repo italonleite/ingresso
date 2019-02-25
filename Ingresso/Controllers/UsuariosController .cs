@@ -35,7 +35,7 @@ namespace Ingresso.Controllers
                })
                .ToList();
         }
-       [Route("v1/usuarios/{login}")]
+       [Route("v1/usuarios/{cpf}")]
         [HttpGet]
         public bool VerificarCpf(string cpf)
         {
@@ -74,12 +74,13 @@ namespace Ingresso.Controllers
             };
         }
 
-        [Route("v1/usuarios/{id}")]
-        [HttpGet]
-        public Usuario Get(int id)
-        {
-            return db.Usuarios.AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
-        }
+       // [Route("v1/usuarios/{id}")]
+       // [HttpGet]
+       // public Usuario Get(int id)
+       // {
+        //    return db.Usuarios.FirstOrDefault(x => x.Id == id);
+    
+   //     }
 
 
 
